@@ -5,6 +5,9 @@
   , "dependencies": {
       "express": "2.5.8"
     , "jade": ">= 0.0.1",
-      "mongodb": ">= 0.9.8"
+      "mongodb": ">= 0.9.8",
+      "stylus":  ">= 0.27.0"
+
+
   }
 }
