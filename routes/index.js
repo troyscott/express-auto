@@ -4,12 +4,16 @@
  */
 
 var ContentProvider = require('../models/content-provider').ContentProvider; 
-var contentProvider  = new ContentProvider();
+var contentProvider  = new ContentProvider('localhost', 27017);
 
 exports.index = function(req, res){
     
-    res.render('index',  {title: 'Brighouse'});
+    contentProvider.ListItems('product', function(error,data) {    
+        console.log('Product data: ' + data[0].code);
+        res.render('index',  {title: 'Brighouse'});
     
+        
+     });
 };
 
 
