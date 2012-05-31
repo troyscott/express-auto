@@ -3,6 +3,26 @@
  * GET home page.
  */
 
+var ContentProvider = require('../models/content-provider').ContentProvider; 
+var contentProvider  = new ContentProvider();
+
 exports.index = function(req, res){
-  res.render('index', { title: 'Express' })
+    
+    res.render('index',  {title: 'Brighouse'});
+    
+};
+
+
+/*
+ *  GET test page
+ */  
+
+exports.test = function(req, res) {
+    
+    cp = contentProvider.test.data;
+    console.log('Test - Obj' + cp);
+    console.log('Test - Obj Property' + cp[0].name);
+    res.render('test', {title: 'Test Page', test:cp});
+
+
 };

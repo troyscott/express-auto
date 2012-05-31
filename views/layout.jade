@@ -1,6 +1,8 @@
-!!!
-html
+!!! 5
+html(lang='en')
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body!= body
+  #leftsidebar!= partial('leftsidebar.jade')
+  #footer!= partial('footer.jade')
