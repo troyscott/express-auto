@@ -3,7 +3,9 @@ html(lang='en')
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/main.css')
-  #header!= partial('header.jade')
-  #leftsidebar!= partial('leftsidebar.jade')
-  body!= body
-  #footer!= partial('footer.jade')
+    | <div id="container">
+    #header!= partial('header.jade')
+    #leftsidebar!= partial('leftsidebar.jade')
+    body!= body
+    #footer!= partial('footer.jade')
+    | </div>
