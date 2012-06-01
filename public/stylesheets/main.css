@@ -53,11 +53,14 @@ h6 {
   color: #000;
   font-weight: normal;
 }
+#menu {
+  padding: 5px;
+}
 .text_menu {
   font-family: Verdanna, Arial, sans-serif;
   font-size: 20px;
   font-weight: normal;
-  font-stretch: extra-expanded;
+  font-stretch: expanded;
 }
 .text_menu .text_menu_1 {
   font-family: Verdana, Arial, sans-serif;
@@ -119,15 +122,15 @@ h6 {
   text-align: right;
 }
 #nav-one {
-  width: 220px;
-  height: 480px;
+  width: 225px;
+  height: 450px;
   float: left;
   background-color: #333;
   text-align: left;
 }
 #contentMain {
-  width: 562px;
-  height: 480px;
+  width: 565px;
+  height: 440px;
   float: left;
   background-color: #ebebeb;
   padding: 5px;
@@ -145,7 +148,7 @@ h6 {
   margin: 0;
   padding: 0;
   list-style: none;
-  width: 228px;
+  width: 225px;
   border-bottom: 0px solid #fff;
 }
 #menu ul li {
@@ -153,7 +156,7 @@ h6 {
 }
 #menu li ul {
   postion: absolute;
-  left: 229px;
+  left: 225px;
   top: 0;
   dispaly: block;
 }
@@ -165,4 +168,10 @@ h6 {
 }
 #menu ul ul {
   visibility: hidden;
+}
+#footer {
+  position: relative;
+  font-size: 10px;
+  text-align: center;
+  bottom: 0;
 }
