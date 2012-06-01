@@ -3,8 +3,9 @@
  * Module dependencies.
  */
 
-var express = require('express')
-  , routes = require('./routes');
+var express = require('express'),
+    stylus = require('stylus'),
+    routes = require('./routes');
 
 
 var app = module.exports = express.createServer();
@@ -16,9 +17,15 @@ app.configure(function(){
   app.set('view engine', 'jade');
   app.use(express.bodyParser());
   app.use(express.methodOverride());
+  app.use(stylus.middleware({
+    src: __dirname + '/views', // .styl files in /views/stylesheets
+    dest: __dirname + '/public' // creates .css in /public/stylesheets
+    
+  }));    
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
-});
+  
+  });
 
 app.configure('development', function(){
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
