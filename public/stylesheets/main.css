@@ -13,66 +13,10 @@ a:hover {
 a:hover {
   text-decoration: none;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Verdana, Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-h1 {
-  font-size: 18px;
-  font-weight: normal;
-  color: #333;
-  letter-spacing: 2px;
-}
-h1 h2 {
-  font-size: 16px;
-  font-weigth: normal;
-  letter-spacing: 2px;
-}
-h3 {
-  font-size: 14px;
-  font-weight: normal;
-  color: #333;
-}
-h3 h4 {
+h4 {
   font-size: 13px;
   font-weight: normal;
   color: #333;
-}
-h5 {
-  font-size: 11px;
-  color: #333;
-}
-h6 {
-  font-size: 9px;
-  color: #000;
-  font-weight: normal;
-}
-#menu {
-  padding: 5px;
-}
-.text_menu {
-  font-family: Verdanna, Arial, sans-serif;
-  font-size: 20px;
-  font-weight: normal;
-  font-stretch: expanded;
-}
-.text_menu .text_menu_1 {
-  font-family: Verdana, Arial, sans-serif;
-  font-size: 20px;
-  font-weight: normal;
-  font-stretch: extra-expanded;
-  color: #fff;
-}
-.text_menu .text_menu_1 .text_submenu {
-  font-family: Verdana, Arial, sans-serif;
-  font-size: 20px;
-  font-weight: normal;
 }
 #container {
   width: 800px;
@@ -121,13 +65,6 @@ h6 {
   margin: 0;
   text-align: right;
 }
-#nav-one {
-  width: 225px;
-  height: 450px;
-  float: left;
-  background-color: #333;
-  text-align: left;
-}
 #contentMain {
   width: 565px;
   height: 440px;
@@ -141,33 +78,50 @@ h6 {
   padding: 5px;
   border: dotted thin #666;
 }
-#menu {
-  color: #fff;
-}
-#menu ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+#nav-one {
   width: 225px;
-  border-bottom: 0px solid #fff;
+  height: 450px;
+  float: left;
+  background-color: #333;
+  text-align: left;
 }
-#menu ul li {
-  postion: relative;
+#l-menu {
+  padding: 0px;
 }
-#menu li ul {
-  postion: absolute;
-  left: 225px;
-  top: 0;
-  dispaly: block;
-}
-#menu li:hover ul {
+#home {
+  width: 200px;
+  margin: 5px;
+  text-align: left;
   display: block;
 }
-#menu li:hover>ul {
-  visibility: visible;
+#contactus {
+  width: 200px;
+  margin: 5px;
+  text-align: left;
+  display: block;
 }
-#menu ul ul {
-  visibility: hidden;
+.menu1,
+.menu2 {
+  width: 200px;
+  margin: 5px;
+  text-align: left;
+  display: block;
+}
+.submenu1,
+.submenu2 {
+  width: 195px;
+  height: 35px;
+  margin: 5px;
+  text-align: left;
+  display: none;
+}
+.ui-button-text {
+  color: #333;
+}
+.submenu1 > .ui-button-text,
+.submenu2 > .ui-button-text {
+  padding-left: 30px;
+  font-size: 10pt;
 }
 #footer {
   position: relative;
