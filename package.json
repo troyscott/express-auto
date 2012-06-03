@@ -1,15 +1,16 @@
 {
   "name": "express-auto",
-  "version": "0.0.1-7",
+  "version": "0.0.1-8",
   "private": true,
   "dependencies": {
     "express": "2.5.8",
     "jade": ">= 0.0.1",
     "mongodb": ">= 0.9.8",
     "mongoose": ">= 2.5.10",
-    "stylus": ">= 0.0.1"
+    "stylus": ">= 0.0.1",
+    "nconf": ">= 0.5.1"
   },
-  "subdomain": "brighouse",
+  "subdomain": "express-auto",
   "scripts": {
     "start": "app.js"
   },

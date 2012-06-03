@@ -1,16 +1,22 @@
+
+// config.json always located in root direcotry
+var nconf = require('nconf');
+nconf.file( { file: 'config.json'});
+
+console.log(nconf.get('mongohq_host'));
+
+
 var server_options = {auto_reconnect:true};
-var username = process.env['MONGOHQ_USER'];
-var password = process.env['MONGOHQ_PASSWORD'];
-var host = process.env['MONGOHQ_HOST'];
-var port = parseInt(process.env['MONGOHQ_PORT']);
-//var port = 27075;
+var username = nconf.get('mongohq_user');
+var password = nconf.get('mongohq_password');
+var host = nconf.get('mongohq_host');
+var port = parseInt(nconf.get('mongohq_port'));
 
 var dbname = process.env['MONGOHQ_DB'];
 
+console.log('Test: ' + nconf.get('mongo_host'));
+
 console.log('Connectiong to MongoHQ at ' + host + ':' + port);
-console.log(typeof(port));
-
-
 
 var mongodb = require('mongodb'),
     mongoserver = new mongodb.Server(host, port, server_options ),
