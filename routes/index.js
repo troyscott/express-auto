@@ -4,7 +4,7 @@
  */
 
 var ContentProvider = require('../models/content-provider').ContentProvider; 
-var contentProvider  = new ContentProvider('localhost', 27017);
+var contentProvider  = new ContentProvider();
 
 exports.index = function(req, res){
     

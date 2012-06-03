@@ -1,11 +1,12 @@
 {
   "name": "express-auto",
-  "version": "0.0.1",
+  "version": "0.0.1-4",
   "private": true,
   "dependencies": {
     "express": "2.5.8",
     "jade": ">= 0.0.1",
     "mongodb": ">= 0.9.8",
+    "mongoose": ">= 2.5.10",
     "stylus": ">= 0.0.1"
   },
   "subdomain": "brighouse",
