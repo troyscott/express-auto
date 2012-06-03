@@ -42,12 +42,11 @@ exports.alternators = function(req, res) {
 exports.test = function(req, res) {
     
     var cp_obj = contentProvider.test.data;
-    console.log('Test - Obj' + cp_obj);
-    console.log('Test - Obj Property' + cp_obj[0].name);
    
     
     contentProvider.ListItems('product', function(error,data) {    
-    
+            
+            console.log('Data: ' + data);  
             res.render('test', {title: 'Test Page', test:cp_obj, dbtest: data});
             
             

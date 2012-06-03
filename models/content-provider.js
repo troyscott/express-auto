@@ -9,7 +9,7 @@ var username = nconf.get('mongo_user') != null ? nconf.get('mongo_user') : proce
 var password = nconf.get('mongo_password') != null ? nconf.get('mongo_password'): process.env['MONGO_PASSWORD'];
 var host = nconf.get('mongo_host') != null ? nconf.get('mongo_host') : process.env['MONGO_HOST'];
 var port = nconf.get('mongo_port') != null ? nconf.get('mongo_port') : process.env['MONGO_PORT'];
-var dbname = "nodejitsudb2767836474"; 
+var dbname = "nodejitsudb27678364743"; 
 
 console.log('Connectiong to MongoHQ at ' + host + ':' + port);
 
