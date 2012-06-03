@@ -7,13 +7,7 @@ var ContentProvider = require('../models/content-provider').ContentProvider;
 var contentProvider  = new ContentProvider();
 
 exports.index = function(req, res){
-    
-    contentProvider.ListItems('product', function(error,data) {    
-        console.log('Product data: ' + data[0].code);
         res.render('index',  {title: 'Brighouse'});
-    
-        
-     });
 };
 
 /*
@@ -26,9 +20,8 @@ exports.contactus = function(req, res) {
 
 }
 
-  
- 
 exports.starters = function(req ,res) {
+   
     res.render('starters', {title: 'Brighouse - Starters'});
 
 }
@@ -48,10 +41,16 @@ exports.alternators = function(req, res) {
 
 exports.test = function(req, res) {
     
-    cp = contentProvider.test.data;
-    console.log('Test - Obj' + cp);
-    console.log('Test - Obj Property' + cp[0].name);
-    res.render('test', {title: 'Test Page', test:cp});
-
+    var cp_obj = contentProvider.test.data;
+    console.log('Test - Obj' + cp_obj);
+    console.log('Test - Obj Property' + cp_obj[0].name);
+   
+    
+    contentProvider.ListItems('product', function(error,data) {    
+    
+            res.render('test', {title: 'Test Page', test:cp_obj, dbtest: data});
+            
+            
+     });
 
 };

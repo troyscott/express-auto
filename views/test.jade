@@ -1,3 +1,14 @@
-- each t in test
-    #test-code= t.code
-    #test-name= t.name
+#contentMain
+    p This data was created using a local Java Script Object:
+        - each t in test
+            #test-code= t.code
+            #test-name= t.name
+
+    p This data is generated from a MongoDb NoSQl  database:
+        - each t in dbtest    
+            #testdb-code= t.code
+            #testdb-code= t.name
+
+
+
+

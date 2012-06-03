@@ -3,18 +3,13 @@
 var nconf = require('nconf');
 nconf.file( { file: 'config.json'});
 
-console.log(nconf.get('mongohq_host'));
-
-
+console.log(nconf.get('mongo_host'));
 var server_options = {auto_reconnect:true};
-var username = nconf.get('mongohq_user');
-var password = nconf.get('mongohq_password');
-var host = nconf.get('mongohq_host');
-var port = parseInt(nconf.get('mongohq_port'));
-
-var dbname = process.env['MONGOHQ_DB'];
-
-console.log('Test: ' + nconf.get('mongo_host'));
+var username = nconf.get('mongo_user');
+var password = nconf.get('mongo_password');
+var host = nconf.get('mongo_host');
+var port = parseInt(nconf.get('mongo_port'));
+var dbname = nconf.get('mongo_database');
 
 console.log('Connectiong to MongoHQ at ' + host + ':' + port);
 
