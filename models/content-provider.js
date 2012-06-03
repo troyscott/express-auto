@@ -5,16 +5,16 @@ nconf.file( { file: 'config.json'});
 
 console.log(nconf.get('mongo_host'));
 var server_options = {auto_reconnect:true};
-var username = nconf.get('mongo_user');
-var password = nconf.get('mongo_password');
-var host = nconf.get('mongo_host');
-var port = parseInt(nconf.get('mongo_port'));
-var dbname = nconf.get('mongo_database');
+var username = nconf.get('mongo_user') != null ? nconf.get('mongo_user') : process.env['MONGO_USER']; 
+var password = nconf.get('mongo_password') != null ? nconf.get('mongo_password'): process.env['MONGO_PASSWORD'];
+var host = nconf.get('mongo_host') != null ? nconf.get('mongo_host') : process.env['MONGO_HOST'];
+var port = nconf.get('mongo_port') != null ? nconf.get('mongo_port') : process.env['MONGO_PORT'];
+var dbname = "nodejitsudb2767836474"; 
 
 console.log('Connectiong to MongoHQ at ' + host + ':' + port);
 
 var mongodb = require('mongodb'),
-    mongoserver = new mongodb.Server(host, port, server_options ),
+    mongoserver = new mongodb.Server(host,parseInt(port), server_options ),
     db_connection = new mongodb.Db(dbname, mongoserver);
 
 function openDB(callback) {
