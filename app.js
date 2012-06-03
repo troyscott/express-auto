@@ -39,6 +39,10 @@ app.configure('production', function(){
 
 
 app.get('/', routes.index);
+app.get('/contactus', routes.contactus);
+app.get('/starters', routes.starters);
+app.get('/alternators', routes.alternators);
+
 app.get('/test', routes.test);
 
 

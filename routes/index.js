@@ -16,10 +16,35 @@ exports.index = function(req, res){
      });
 };
 
+/*
+ * GET contact us page
+ * 
+ */
+
+exports.contactus = function(req, res) { 
+    res.render('contactus', {title: 'Brighouse - Contact Us'});
+
+}
+
+  
+ 
+exports.starters = function(req ,res) {
+    res.render('starters', {title: 'Brighouse - Starters'});
+
+}
+
+
+exports.alternators = function(req, res) {
+    res.render('alternators', {title: 'Brighouse - Alternators'})
+
+}
+
 
 /*
  *  GET test page
  */  
+
+
 
 exports.test = function(req, res) {
     

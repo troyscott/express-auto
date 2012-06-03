@@ -1,12 +1,20 @@
-var server_options = {auto_reconnect:true},
-    username = '',
-    password = '',
-    server = '',
-    port = 0
+var server_options = {auto_reconnect:true};
+var username = process.env['MONGOHQ_USER'];
+var password = process.env['MONGOHQ_PASSWORD'];
+var host = process.env['MONGOHQ_HOST'];
+var port = parseInt(process.env['MONGOHQ_PORT']);
+//var port = 27075;
+
+var dbname = process.env['MONGOHQ_DB'];
+
+console.log('Connectiong to MongoHQ at ' + host + ':' + port);
+console.log(typeof(port));
+
+
 
 var mongodb = require('mongodb'),
-    mongoserver = new mongodb.Server(server, port, server_options ),
-    db_connection = new mongodb.Db('tscdev', mongoserver);
+    mongoserver = new mongodb.Server(host, port, server_options ),
+    db_connection = new mongodb.Db(dbname, mongoserver);
 
 function openDB(callback) {
 
