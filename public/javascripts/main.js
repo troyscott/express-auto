@@ -5,9 +5,11 @@ jQuery(document).ready(function() {
 
  // Left Side Bar Navigation
 
- $("#home, #contactus").button();
- $(".menu1 , .menu2").button( { icons: {secondary: 'ui-icon-triangle-1-s'}} );
- $(".submenu1, .submenu2").button();
+
+ $("#home").button({icons: {primary: 'ui-icon-home'}});
+ $("#contactus").button({icons: {primary: 'ui-icon-mail-closed'}});
+ $(".menu1 , .menu2").button( { icons: {primary: 'ui-icon-bullet', secondary: 'ui-icon-triangle-1-s'}} );
+ $(".submenu1, .submenu2").button({icons: {primary: 'ui-icon-stop'}});
 
  $("#contentMain").mouseover(function(){
     console.log("in contentMain");
